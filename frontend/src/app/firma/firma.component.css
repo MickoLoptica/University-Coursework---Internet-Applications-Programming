@@ -1,0 +1,50 @@
+.telo {
+    background-color: #F5F5DC;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.dugme {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px;
+}
+
+.podaci {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 20px;
+}
+
+.tabela {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: 5px;
+}
+
+.tabelaCelija {
+    border: 1px solid black;
+    padding: 8px;
+    cursor: default;
+}
+
+.forma {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 20px;
+}
+
+.tekst {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px;
+}
+
+.error {
+    color: red;
+}
+
+.kanvas {
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+}

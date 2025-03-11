@@ -1,0 +1,68 @@
+<app-meni-dekorater></app-meni-dekorater>
+<body class="telo">
+    <div class="podnaslov">Тренутна заказивања</div> 
+    <span *ngIf="korisnik.blokiran == 'da'" class="upozorenje">Блокирани сте за примање нових послова док не завршите тренутне.</span>
+    <span *ngIf="zakazivanja.length==0 && korisnik.blokiran == 'ne'" class="tekst">Нема заказаних уређивања.</span>
+    <table *ngIf="zakazivanja.length!=0 && korisnik.blokiran == 'ne'" class="tabela">
+        <tr>
+            <th class="tabelaCelija">Датум заказивања</th>
+            <th class="tabelaCelija">Датум израде</th>
+            <th class="tabelaCelija">Корисник</th>
+            <th class="tabelaCelija">Тражене услуге</th>
+            <th class="tabelaCelija">Потврда</th>
+        </tr> 
+        <tr *ngFor="let z of zakazivanja">
+            <td class="tabelaCelija">{{ispisDatuma(z.trenutakZakazivanja)}}</td>
+            <td class="tabelaCelija">{{ispisDatuma(z.datumVreme)}}</td>
+            <td class="tabelaCelija">{{z.firma}}</td>
+            <td class="tabelaCelija">{{ispisUsluga(z)}}</td>
+            <td class="tabelaCelija">
+                <div *ngIf="!odbijanjeZakazivanja || z!=izabranoZakazivanje">
+                    <button (click)="potvrdi(z)" class="dugme">Потврди</button>&nbsp;
+                    <button (click)="odbijanje(z)" class="dugme">Одбиј</button>
+                </div>
+                <div *ngIf="odbijanjeZakazivanja && z==izabranoZakazivanje" class="forma">
+                    <span class="tekst">Оставите коментар: </span><br>
+                    <textarea [(ngModel)]="komentar" placeholder="Унесите коментар"></textarea>
+                    <br>
+                    <button (click)="odbijZakazivanje()">Одбиј</button>&nbsp;
+                    <button (click)="odustaniOdPreuzimanjaZakazivanja()">Одустани</button>
+                </div>
+            </td>
+         </tr>
+     </table>
+     <span class="error">{{greska1}}</span><br>
+     <br><br><br>
+     <div class="podnaslov">Моји послови</div> 
+     <span *ngIf="poslovi.length==0" class="tekst">Нема тренутних послова.</span>
+     <table *ngIf="poslovi.length!=0" class="tabela">
+        <tr>
+            <th class="tabelaCelija">Датум заказивања</th>
+            <th class="tabelaCelija">Датум израде</th>
+            <th class="tabelaCelija">Корисник</th>
+            <th class="tabelaCelija">Опис</th>
+            <th class="tabelaCelija">Тражене услуге</th>
+            <th class="tabelaCelija">Завршетак</th>
+        </tr>
+        <tr *ngFor="let p of poslovi">
+            <td class="tabelaCelija">{{ispisDatuma(p.trenutakZakazivanja)}}</td>
+            <td class="tabelaCelija">{{ispisDatuma(p.datumVreme)}}</td>
+            <td class="tabelaCelija">{{p.korisnik}}</td>
+            <td class="tabelaCelija">{{p.opis}}</td>
+            <td class="tabelaCelija">{{ispisUsluga(p)}}</td>
+            <td class="tabelaCelija">
+                <div *ngIf="(!zavrsavanjePosla || p!=izabraniPosao) && mogucZavrsetak(p)">
+                    <button (click)="zavrsi(p)" class="dugme">Заврши</button>&nbsp;
+                </div>
+                <div *ngIf="zavrsavanjePosla && p==izabraniPosao" class="forma">
+                    <span class="tekst">Приложите слике: </span><br>
+                    <input type="file" name="slikaPosla" (change)="onFileChange($event)">
+                    <br>
+                    <button (click)="zavrsiPosao()">Заврши</button>&nbsp;
+                    <button (click)="odustaniOdZavrsavanjaPosla()">Одустани</button>
+                </div>
+            </td>
+        </tr>
+     </table>
+     <span class="error">{{greska2}}</span><br>
+ </body>

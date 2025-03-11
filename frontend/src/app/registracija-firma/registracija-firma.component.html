@@ -1,0 +1,98 @@
+<body class="telo">
+    <div class="naslov">Ваша машта - ваша башта</div>
+    <div class="meni">Администратор - Регистрација фирме</div>
+    <form (ngSubmit)="registracija()" #registrationForm="ngForm" class="forma">
+        <table>
+            <tr>
+                <td>Назив: </td>
+                <td><input type="text" [(ngModel)]="naziv" name="naziv"></td>
+            </tr>
+            <tr>
+                <td>Адреса: </td>
+                <td><input type="text" [(ngModel)]="adresa" name="adresa"></td>
+            </tr>
+            <tr>
+                <td>Локација: </td>
+                <td>
+                    <div id="map" style="height: 300px; width: 500px;"></div>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td rowspan="2" class="lista">Период годишњег одмора - </td>
+                <td>Од: </td>
+                <td>
+                    <select name="odmorPocetak.mesec" [(ngModel)]="odmorPocetak.mesec" (ngModelChange)="azurirajPocetneDane($event)">
+                        <option *ngFor="let m of meseci; let i = index" [value]="i">{{m.naziv}}</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="odmorPocetak.dan" [(ngModel)]="odmorPocetak.dan">
+                        <option *ngFor="let d of daniPocetak" [value]="d">{{d}}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>До: </td>
+                <td>
+                    <select name="odmorKraj.mesec" [(ngModel)]="odmorKraj.mesec" (ngModelChange)="azurirajKrajnjeDane($event)">
+                        <option *ngFor="let m of meseci; let i = index" [value]="i">{{m.naziv}}</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="odmorKraj.dan" [(ngModel)]="odmorKraj.dan">
+                        <option *ngFor="let d of daniKraj" [value]="d">{{d}}</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <br><br><br>
+        Додавање услуге фирме: <br>
+        <hr>
+        Назив: <input type="text" [(ngModel)]="nazivNoveUsluge" name="nazivNoveUsluge">
+        Цена: <input type="number" [(ngModel)]="cenaNoveUsluge" name="cenaNoveUsluge"><br>
+        <button  type="button" (click)="dodajUslugu()" class="dugme">Додај услугу</button>
+        <table>
+            <tr>
+                <td rowspan="usluge.length" class="lista">Услуге фирме: </td>
+                <td>
+                    <table>
+                        <tr *ngFor="let u of usluge">
+                            <td>{{u.naziv}} - {{u.cena}}din</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <br><br><br>
+        Додавање запослених: <br>
+        <hr>
+        <table>
+            <tr>
+                <td rowspan="usluge.length" class="lista">Декоратери: </td>
+                <td>
+                    <table>
+                        <tr *ngFor="let d of dekorateri">
+                            <td class="tabelaCelija">{{d.ime}} {{d.prezime}}</td>
+                        </tr>
+                        <tr><button (click)="pripremiDekoratera()" class="dugme">Додај декоратера</button></tr>
+                    </table>
+                </td>
+            </tr>
+            <tr *ngIf = "dekorateri.length > 0">
+                <td>Контакт особа: </td>
+                <td>
+                    <select [(ngModel)]="telefon" name="kontakti">
+                        <option *ngFor="let d of dekorateri" [value]="d.telefon">{{d.ime}} {{d.prezime}}</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <button type="submit" class="dugme">Региструј фирму</button>
+        <button (click)="odustani()" class="dugme">Одустани</button>
+    </form>
+    <p class="error">{{greska}}</p>
+</body>

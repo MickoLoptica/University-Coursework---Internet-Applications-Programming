@@ -1,0 +1,28 @@
+<body class="telo">
+    <div class="naslov">Ваша машта - ваша башта</div>
+    <div class="meni">Промена лозинке</div>
+    <form (ngSubmit)="promeni()" #registrationForm="ngForm" class="forma">
+        <table>
+            <tr>
+                <td>Корисничко име: </td>
+                <td><input type="text" [(ngModel)]="korisnickoIme" name="korisnickoIme"></td>
+            </tr>
+            <tr>
+                <td>Стара лозинка:</td>
+                <td><input type="password" [(ngModel)]="staraLozinka" name="staraLozinka"></td>
+            </tr>
+            <tr>
+                <td>Нова лозинка: </td>
+                <td><input type="password" [(ngModel)]="novaLozinka" name="novaLozinka"></td>
+            </tr>
+            <tr>
+                <td>Поновљена нова лозинка: </td>
+                <td><input type="password" [(ngModel)]="ponovljenaNovaLozinka" name="ponovljenaNovaLozinka"></td>
+            </tr>
+        </table>
+        <button type="submit" class="dugme">Промени</button>
+        <button (click)="odustani()" class="dugme">Одустани</button>
+    </form>
+    <p class="error">{{greska}}</p>
+</body>
+

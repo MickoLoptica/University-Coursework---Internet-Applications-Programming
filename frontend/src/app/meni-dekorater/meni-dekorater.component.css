@@ -1,0 +1,46 @@
+.telo {
+    background-color: #F5F5DC;
+    margin: -8px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.naslov {
+    background-color: #228B22;
+    color: #FFDA03;
+    font: bold;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.meni {
+    background-color: #E2725B;
+    color: #FFDA03;
+    font: bold;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.meniLink {
+    color: #FFDA03;
+    text-decoration: none;
+}
+
+.meniLink:hover {
+    color: #FFDA03;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.blokiranLink {
+    pointer-events: none;
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+}

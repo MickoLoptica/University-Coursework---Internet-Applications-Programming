@@ -1,0 +1,50 @@
+<body class="telo">
+    <div class="naslov">Ваша машта - ваша башта</div>
+    <div class="meni">Ажурирање података</div>
+    <form (ngSubmit)="azurirajPodatke()" #registrationForm="ngForm" enctype="multipart/form-data" class="forma">
+        <table>
+            <tr>
+                <td>Име: </td>
+                <td><input type="text" [(ngModel)]="ime" name="ime"></td>
+            </tr>
+            <tr>
+                <td>Презиме: </td>
+                <td><input type="text" [(ngModel)]="prezime" name="prezime"></td>
+            </tr>
+            <tr>
+                <td>Адреса: </td>
+                <td><input type="text" [(ngModel)]="adresa" name="adresa"></td>
+            </tr>
+            <tr>
+                <td>Контакт телефон: </td>
+                <td><input type="text" [(ngModel)]="telefon" name="telefon"></td>
+            </tr>
+            <tr>
+                <td>Имејл адреса: </td>
+                <td><input type="text" [(ngModel)]="imejl" name="imejl"></td>
+            </tr>
+            <tr *ngIf="tip === 'vlasnik'">
+                <td>Број кредитне картице: </td>
+                <td>
+                    <input type="text" [(ngModel)]="brojKartice" name="brojKartice">
+                    <img *ngIf="dohvatiSlikuKartice()" [src]="dohvatiSlikuKartice()" alt="Slika kartice" class="slikaKartice">
+                </td>
+            </tr>
+            <tr *ngIf="tip === 'dekorater'">
+                <td>Фирма: </td>
+                <td>
+                    <select [(ngModel)]="firma" name="firme">
+                        <option *ngFor="let f of firme" [value]="f.naziv">{{ f.naziv }}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Профилна слика: </td>
+                <td><input type="file" (change)="onFileChange($event)"></td>
+            </tr>
+        </table>
+        <button type="submit" class="dugme">Ажурирај</button>
+        <button type="button" (click)="odustani()" class="dugme">Одустани</button>
+    </form>
+    <p class="error">{{greska}}</p>
+</body>

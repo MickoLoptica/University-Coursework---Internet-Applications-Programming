@@ -1,0 +1,19 @@
+<body class="telo">
+    <div class="naslov">Ваша машта - ваша башта</div>
+    <div class="podnaslov">Администратор</div>
+    <form (ngSubmit)="prijava()" #registrationForm="ngForm" class="forma">
+        <table>
+            <tr>
+                <td>Корисничко име: </td>
+                <td><input type="text" [(ngModel)]="korisnickoIme" name="korisnickoIme"></td>
+            </tr>
+            <tr>
+                <td>Лозинка: </td>
+                <td><input type="password" [(ngModel)]="lozinka" name="lozinka"></td>
+            </tr>
+        </table>
+        <button type="submit" class="dugme">Пријави се</button>
+    </form>
+    <p class="error">{{greska}}</p>
+</body>
+

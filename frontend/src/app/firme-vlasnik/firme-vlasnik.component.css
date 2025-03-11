@@ -1,0 +1,50 @@
+.telo {
+    background-color: #F5F5DC;
+    min-height: 100vh;
+    margin: -8px;
+    margin-top: 0;
+    padding: 0;
+}
+
+.pretraga {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px;
+}
+
+.tekst {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px;
+}
+
+.tabela {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: 5px;
+}
+
+.tabelaCelija {
+    border: 1px solid black;
+    padding: 8px;
+    cursor: default;
+}
+
+.tabelaCelijaAktivna {
+    border: 1px solid black;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.tabelaCelijaIzbor {
+    border: 1px solid black;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.tabelaCelijaIzbor:hover {
+    border: 1px solid black;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}

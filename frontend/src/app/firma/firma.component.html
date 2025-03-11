@@ -1,0 +1,157 @@
+<app-meni-vlasnik class="meni"></app-meni-vlasnik>
+<body class="telo">
+    <button (click)="nazad()" class="dugme">Назад на списак фирми</button><br>
+    <br><br><br>
+    <span class="tekst">Подаци о фирми: </span><br>
+    <hr>
+    <table class="podaci">
+        <tr>
+            <td>Назив: </td>
+            <td>{{firma.naziv}}</td>
+        </tr>
+        <tr>
+            <td>Адреса: </td>
+            <td>{{firma.adresa}}</td>
+        </tr>
+        <tr>
+            <td>Контакт телефон: </td>
+            <td>{{firma.telefon}}</td>
+        </tr>
+        <tr>
+            <td>Услуге: </td>
+            <td>
+                <table class="tabela">
+                    <tr *ngFor="let u of firma.usluge">
+                        <td class="tabelaCelija">{{u.naziv}}</td>
+                        <td class="tabelaCelija">{{u.cena}}din</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>Локација: </td>
+            <td>
+                <div id="map" style="height: 300px; width: 500px;"></div>
+            </td>
+        </tr>
+    </table>
+    <br><br><br>
+    <span class="tekst">Заказивање уређивања: </span><br>
+    <hr>
+    <div *ngIf="korak == 1">
+        <form (ngSubmit)="naredniKorak()" #registrationForm="ngForm" class="forma">
+            <table>
+                <tr>
+                    <td>Датум и време: </td>
+                    <td><input type="datetime-local" [(ngModel)]="datumVreme" name="datumVreme" [min]="trenutnoVreme"></td>
+                </tr>
+                <tr>
+                    <td>Кврадратура баште: </td>
+                    <td><input type="number" [(ngModel)]="kvadraturaUkupno" name="kvadraturaUkupno" min="0"></td>
+                </tr>
+                <tr>
+                    <td>Тип баште: </td>
+                    <td>
+                        <input type="radio" [(ngModel)]="tip" name="tip" value="privatna">Приватна
+                        <input type="radio" [(ngModel)]="tip" name="tip" value="restoranska">Ресторанска
+                    </td>
+                </tr>
+            </table>
+            <button type="submit" class="dugme">Даље</button><br>
+        </form>
+    </div>
+    <div *ngIf="korak == 2 && tip == 'privatna'">
+        <form (ngSubmit)="zakazivanjePrivatno()" #registrationForm="ngForm" class="forma">
+            <table>
+                <tr>
+                    <td>Квадратура баште под базеном: </td>
+                    <td><input type="number" [(ngModel)]="kvadraturaBazen" name="kvadraturaBazen" min="0"></td>
+                </tr>
+                <tr>
+                    <td>Кврадратура баште под зеленилом: </td>
+                    <td><input type="number" [(ngModel)]="kvadraturaZelenilo" name="kvadraturaZelenilo" min="0"></td>
+                </tr>
+                <tr>
+                    <td>Квадратура баште опремљена лежаљкама и столовима: </td>
+                    <td><input type="number" [(ngModel)]="kvadraturaNamestaj" name="kvadraturaNamestaj" min="0"></td>
+                </tr>
+                <tr>
+                    <td>Опис жељеног изгледа баште: </td>
+                    <td><textarea [(ngModel)]="opis" name="opis" rows="4" cols="50"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Додатне услуге фирме: </td>
+                    <td>
+                        <table>
+                            <tr *ngFor="let u of firma.usluge">
+                                <td><input type="checkbox" name="usluge" [ngModel]="usluge.includes(u.naziv)" (ngModelChange)="onCheckboxChange($event, u.naziv)">{{u.naziv}} - {{u.cena}}din</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Изглед баште: </td>
+                    <td>
+                        <canvas id="izgledBastePrivatna" class="kanvas" width="500" height="300"></canvas><br>
+                        <input type="file" (change)="onFileSelected($event)">
+                    </td>
+                </tr>
+            </table>
+            <button type="submit" class="dugme">Закажи уређивање</button>
+            <button (click)="prethodniKorak()" class="dugme">Назад</button>
+        </form>
+    </div>
+    <div *ngIf="korak == 2 && tip == 'restoranska'">
+        <form (ngSubmit)="zakazivanjeRestoransko()" #registrationForm="ngForm" class="forma">
+            <table>
+                <tr>
+                    <td>Квадратура баште опремљена фонтаном: </td>
+                    <td><input type="number" [(ngModel)]="kvadraturaFontana" name="kvadraturaFontana" min="0"></td>
+                </tr>
+                <tr>
+                    <td>Кврадратура баште под зеленилом: </td>
+                    <td><input type="number" [(ngModel)]="kvadraturaZelenilo" name="kvadraturaZelenilo" min="0"></td>
+                </tr>
+                <tr>
+                    <td>Број столова: </td>
+                    <td><input type="number" [(ngModel)]="brojStolova" name="brojStolova" min="0"></td>
+                </tr>
+                <tr>
+                    <td>Број столица: </td>
+                    <td><input type="number" [(ngModel)]="brojStolica" name="brojStolica" min="0"></td>
+                </tr>
+                <tr>
+                    <td>Опис жељеног изгледа баште: </td>
+                    <td><textarea [(ngModel)]="opis" name="opis" rows="4" cols="50"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Додатне услуге фирме: </td>
+                    <td>
+                        <table>
+                            <tr *ngFor="let u of firma.usluge">
+                                <td><input type="checkbox" name="usluge" [ngModel]="usluge.includes(u.naziv)" (ngModelChange)="onCheckboxChange($event, u.naziv)">{{u.naziv}} - {{u.cena}}din</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Изглед баште: </td>
+                    <td>
+                        <canvas id="izgledBasteRestoranska" class="kanvas" width="500" height="300"></canvas><br>
+                        <input type="file" (change)="onFileSelected($event)">
+                    </td>
+                </tr>
+            </table>
+            <button type="submit" class="dugme">Закажи уређивање</button>
+            <button (click)="prethodniKorak()" class="dugme">Назад</button>
+        </form>
+    </div>
+    <p class="error">{{greska}}</p>
+    <br><br><br>
+    <span class="tekst">Коментари: </span><br>
+    <hr>
+    <div *ngFor="let z of zakazivanja">
+        <span class="tekst">{{z.korisnik}}: </span><br>
+        <span class="tekst">{{nacrtajZvezdice(z)}} - {{z.komentar}}</span><br><br>
+    </div>
+</body>

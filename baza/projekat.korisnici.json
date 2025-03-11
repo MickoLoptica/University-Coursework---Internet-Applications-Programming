@@ -1,0 +1,209 @@
+[{
+  "_id": {
+    "$oid": "66ec0fabf62cdce5264b54a0"
+  },
+  "korisnickoIme": "admin",
+  "lozinka": "$2b$10$RScXq2p5gECIb8JWoZVToOp0FOVj7xTlFhbYEvfNJCn3s65OnTvwC",
+  "ime": "a",
+  "prezime": "a",
+  "pol": "M",
+  "adresa": "a",
+  "telefon": "+3811234567",
+  "imejl": "admin@gmail.com",
+  "profilnaSlika": "podrazumevanaProfilna.jpg",
+  "tip": "administrator",
+  "deaktiviran": "ne",
+  "brojKartice": "4539111111111111",
+  "odobren": "ne",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ed91e44ad385e07979ccd6"
+  },
+  "korisnickoIme": "ana",
+  "lozinka": "$2b$10$n37JvbCV7ph6k2Abe6wDKeU58AMvKdA2SV8F/OfA53TqHeRcXMohq",
+  "ime": "Ana",
+  "prezime": "Bastovanovic",
+  "pol": "Z",
+  "adresa": "Kuca na kraj sela, Dobar Sad",
+  "telefon": "+3811111111",
+  "imejl": "ana.dekoraterka@gmail.com",
+  "profilnaSlika": "1726845357104.jpg",
+  "tip": "dekorater",
+  "deaktiviran": "ne",
+  "firma": "Beobasta",
+  "blokiran": "ne",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ed91e44ad385e07979ccd8"
+  },
+  "korisnickoIme": "pera",
+  "lozinka": "$2b$10$nUgAxhUbkmSeiSFQB7mNs.kAozDa4RX/FIqXFZQS6undTuKazGFru",
+  "ime": "Petar",
+  "prezime": "Bastovanovic",
+  "pol": "M",
+  "adresa": "Kuca na kraj sela, Dobar Sad",
+  "telefon": "+3812222222",
+  "imejl": "pera.dekorater@gmail.com",
+  "profilnaSlika": "1726845406706.jpg",
+  "tip": "dekorater",
+  "deaktiviran": "ne",
+  "firma": "Beobasta",
+  "blokiran": "ne",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ed93274ad385e07979ccf6"
+  },
+  "korisnickoIme": "mika",
+  "lozinka": "$2b$10$HRkaku4GUWEmYE01yrbm6.TciB19TV/2cuuMTNjxf6gXzQwW1w8Wy",
+  "ime": "Miodrag",
+  "prezime": "Dekoratov",
+  "pol": "M",
+  "adresa": "Drugo najvise drvo, Servudska suma",
+  "telefon": "+442222222",
+  "imejl": "petar.decor@outlook.com",
+  "profilnaSlika": null,
+  "tip": "dekorater",
+  "deaktiviran": "ne",
+  "firma": "Basta Plus",
+  "blokiran": "ne",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ed93274ad385e07979ccf8"
+  },
+  "korisnickoIme": "zika",
+  "lozinka": "$2b$10$BD3r1O9v2npzrHZX87cAAO7kE8UgDabvU9Lz1N1SAZhdCj7vlYEBW",
+  "ime": "Zivorad",
+  "prezime": "Bastovanski",
+  "pol": "M",
+  "adresa": "Najvise drvo, Servudska suma",
+  "telefon": "+441111111",
+  "imejl": "zika.decor@yahoo.com",
+  "profilnaSlika": "1726845655616.jpg",
+  "tip": "dekorater",
+  "deaktiviran": "ne",
+  "firma": "Basta Plus",
+  "blokiran": "ne",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ed936f4ad385e07979cd19"
+  },
+  "korisnickoIme": "farmer",
+  "lozinka": "$2b$10$ShQfUwEu0F84.tJl2rkPa.79JyH4EhQX.gw0kfBDojWfZWnMXKii.",
+  "ime": "Farmer",
+  "prezime": "Farmerovski",
+  "pol": "M",
+  "adresa": "Burglen, Kingdom of Rhodoks",
+  "telefon": "+3813333333",
+  "imejl": "farmer.farmerovski@gmail.com",
+  "profilnaSlika": "podrazumevanaProfilna.jpg",
+  "tip": "vlasnik",
+  "deaktiviran": "ne",
+  "brojKartice": "4539111111111111",
+  "odobren": "da",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ed9d72a46a09bfddb657af"
+  },
+  "korisnickoIme": "krompirko",
+  "lozinka": "$2b$10$7YQ/9CI11w.CYNtwYyuIde72njyfVGDJZJV99bRZANnhIX1YEXiZ6",
+  "ime": "Krompirko",
+  "prezime": "Povrtkovic",
+  "pol": "M",
+  "adresa": "Dekoratovskog 15, Bastovangrad",
+  "telefon": "+3814444444",
+  "imejl": "krom.pirko@gmail.com",
+  "profilnaSlika": "1726848370300.jpg",
+  "tip": "vlasnik",
+  "deaktiviran": "ne",
+  "brojKartice": "4539123456789123",
+  "odobren": "da",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eeba35a65ce9376b2367a0"
+  },
+  "korisnickoIme": "joca",
+  "lozinka": "$2b$10$4vckLNGxBHZlNLCVLkY1KOZnHjcsdxf/bpKgtSCAuo9frgOrVU5PC",
+  "ime": "Jovan",
+  "prezime": "Uredjanovic",
+  "pol": "M",
+  "adresa": "Lepog cveca 10, Bastovangrad",
+  "telefon": "+3811234567",
+  "imejl": "joca.decoration@gmail.com",
+  "profilnaSlika": "podrazumevanaProfilna.jpg",
+  "tip": "dekorater",
+  "deaktiviran": "ne",
+  "firma": "Biljni Zivot",
+  "blokiran": "ne",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eeba35a65ce9376b2367a2"
+  },
+  "korisnickoIme": "mile",
+  "lozinka": "$2b$10$MBEsmLHK4EqVeatLMgyUeOGF.bCIo/sZVPOd6h1KGMfIW5PDfozoW",
+  "ime": "Milutin",
+  "prezime": "Hadzi-Dekoratorovic",
+  "pol": "M",
+  "adresa": "Lepog cveca 10, Bastovangrad",
+  "telefon": "+38187654321",
+  "imejl": "mhd@gmail.com",
+  "profilnaSlika": "1726921256925.jpg",
+  "tip": "dekorater",
+  "deaktiviran": "ne",
+  "firma": "Biljni Zivot",
+  "blokiran": "ne",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66efda6c09fc9fb8e5557c7d"
+  },
+  "korisnickoIme": "cveta",
+  "lozinka": "$2b$10$M2JuGwBLx7kvfuLAM6s8z.gbGRbtd2vioBE6GdbiNpCfsA1BfHYqa",
+  "ime": "Cveta",
+  "prezime": "Lepojevic",
+  "pol": "Z",
+  "adresa": "Kuca na kraj sela, Dobar Sad",
+  "telefon": "+3812121212",
+  "imejl": "cveta@gmail.com",
+  "profilnaSlika": "1726995052896.jpg",
+  "tip": "dekorater",
+  "deaktiviran": "ne",
+  "firma": "Beobasta",
+  "blokiran": "ne",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66f00e241d6b380b0b1c8139"
+  },
+  "korisnickoIme": "teodoran31",
+  "lozinka": "$2b$10$.8cKe8pCQNl.rmtxqx3YZeo0pL0dokZ3ZwZa5FDKOmU5ActG9qR36",
+  "ime": "teodora",
+  "prezime": "nikolic",
+  "pol": "Z",
+  "adresa": "jakovo",
+  "telefon": "+38187654321",
+  "imejl": "doda3101@gmail.com",
+  "profilnaSlika": "podrazumevanaProfilna.jpg",
+  "tip": "vlasnik",
+  "deaktiviran": "ne",
+  "brojKartice": "4539222222222222",
+  "odobren": "da",
+  "__v": 0
+}]

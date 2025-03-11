@@ -1,0 +1,57 @@
+<body class="telo">
+    <div class="naslov">Ваша машта - ваша башта</div>
+    <div class="meni">Регистрација</div><br>
+    <form (ngSubmit)="registracija()" #registrationForm="ngForm" enctype="multipart/form-data" class="forma">
+        <table>
+            <tr>
+                <td>Корисничко име: </td>
+                <td><input type="text" [(ngModel)]="korisnickoIme" name="korisnickoIme"></td>
+            </tr>
+            <tr>
+                <td>Лозинка: </td>
+                <td><input type="password" [(ngModel)]="lozinka" name="lozinka"></td>
+            </tr>
+            <tr>
+                <td>Име: </td>
+                <td><input type="text" [(ngModel)]="ime" name="ime"></td>
+            </tr>
+            <tr>
+                <td>Презиме: </td>
+                <td><input type="text" [(ngModel)]="prezime" name="prezime"></td>
+            </tr>
+            <tr>
+                <td>Пол: </td>
+                <td>
+                    <input type="radio" name="pol" value="M" [(ngModel)]="pol">М
+                    <input type="radio" name="pol" value="Z" [(ngModel)]="pol">Ж
+                </td>
+            </tr>
+            <tr>
+                <td>Адреса: </td>
+                <td><input type="text" [(ngModel)]="adresa" name="adresa"></td>
+            </tr>
+            <tr>
+                <td>Контакт телефон: </td>
+                <td><input type="text" [(ngModel)]="telefon" name="telefon"></td>
+            </tr>
+            <tr>
+                <td>Имејл адреса: </td>
+                <td><input type="text" [(ngModel)]="imejl" name="imejl"></td>
+            </tr>
+            <tr>
+                <td>Број кредитне картице: </td>
+                <td>
+                    <input type="text" [(ngModel)]="brojKartice" name="brojKartice">  
+                    <img *ngIf="dohvatiSlikuKartice()" [src]="dohvatiSlikuKartice()" alt="Slika kartice" class="slikaKartice">
+                </td>
+            </tr>
+            <tr>
+                <td>Профилна слика: </td>
+                <td><input type="file" (change)="onFileChange($event)"></td>
+            </tr>
+        </table>
+        <button type="submit" class="dugme">Региструј се</button>
+        <button (click)="odustani()" class="dugme">Одустани</button>
+    </form>
+    <p class="error">{{greska}}</p>
+</body>

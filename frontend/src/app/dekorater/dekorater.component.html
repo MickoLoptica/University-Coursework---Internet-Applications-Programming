@@ -1,0 +1,28 @@
+<app-meni-dekorater class="meni"></app-meni-dekorater>
+<body class="telo">
+    <table class="podaci">
+        <tr>
+            <td rowspan="5"><img *ngIf="korisnik.profilnaSlika" [src]="'http://localhost:4000/pictures/profiles/' + korisnik.profilnaSlika" alt="Profilna slika"></td>
+            <td>Име: </td>
+            <td>{{korisnik.ime}}</td>
+        </tr>
+        <tr>
+            <td>Презиме: </td>
+            <td>{{korisnik.prezime}}</td>
+        </tr>
+        <tr>
+            <td>Адреса: </td>
+            <td>{{korisnik.adresa}}</td>
+        </tr>
+        <tr>
+            <td>Имејл адреса: </td>
+            <td>{{korisnik.imejl}}</td>
+        </tr>
+        <tr>
+            <td>Контакт телефон: </td>
+            <td>{{korisnik.telefon}}</td>
+        </tr>
+    </table>
+    <button (click)="azuriranje()" class="dugme">Ажурирај податке</button>
+    <button (click)="odjava()" class="dugme">Излогуј се</button><br>
+</body>

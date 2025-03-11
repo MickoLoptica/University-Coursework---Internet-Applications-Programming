@@ -1,0 +1,24 @@
+.telo {
+  background-color: #F5F5DC;
+  min-height: 100vh;
+  margin: -8px;
+  margin-top: 0;
+  padding: 0;
+}
+
+.podnaslov {
+    background-color: #E2725B;
+    color: #FFDA03;
+    font: bold;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.grafik {
+position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  margin: auto;
+}

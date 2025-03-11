@@ -1,0 +1,54 @@
+<app-meni-vlasnik></app-meni-vlasnik>
+<body class="telo">
+    <div class="podnaslov">Завршени послови</div>
+    <span *ngIf="arhiva.length==0" class="tekst">Архива послова је празна.</span>
+    <table *ngIf="arhiva.length!=0" class="tabela">
+        <tr>
+            <th class="tabelaCelija">Датум израде</th>
+            <th class="tabelaCelija">Фирма</th>
+            <th class="tabelaCelija">Квадратура базена</th>
+            <th class="tabelaCelija">Квадратура фонтана</th>
+            <th class="tabelaCelija">Одржавање водених површина</th>
+        </tr> 
+        <tr *ngFor="let a of arhiva">
+            <td class="tabelaCelija">{{ispisDatuma(a.datumVreme)}}</td>
+            <td class="tabelaCelija">{{a.firma}}</td>
+            <td class="tabelaCelija">
+                <span *ngIf="a.kvadraturaBazen">{{a.kvadraturaBazen}}</span>
+                <span *ngIf="!a.kvadraturaBazen">0</span>
+            </td>
+            <td class="tabelaCelija">
+                <span *ngIf="a.kvadraturaFontana">{{a.kvadraturaFontana}}</span>
+                <span *ngIf="!a.kvadraturaFontana">0</span>
+            </td>
+            <td class="tabelaCelija">
+                <button *ngIf="moguceOdrzavanje(a)" (click)="zakaziOdrzavanje(a)" class="dugme">Закажи</button>
+                <span *ngIf="!moguceOdrzavanje(a)">/</span>
+            </td>
+        </tr>
+    </table>
+    <div class="podnaslov">Тренутна одржавања</div>
+    <span *ngIf="odrzavanja.length==0" class="tekst">Немате активна одржавања.</span>
+    <table *ngIf="odrzavanja.length!=0" class="tabela">
+        <tr>
+            <th class="tabelaCelija">Датум израде</th>
+            <th class="tabelaCelija">Фирма</th>
+            <th class="tabelaCelija">Квадратура базена</th>
+            <th class="tabelaCelija">Квадратура фонтана</th>
+            <th class="tabelaCelija">Стаус</th>
+        </tr> 
+        <tr *ngFor="let o of odrzavanja">
+            <td class="tabelaCelija">{{ispisDatuma(o.datumVreme)}}</td>
+            <td class="tabelaCelija">{{o.firma}}</td>
+            <td class="tabelaCelija">
+                <span *ngIf="o.kvadraturaBazen">{{o.kvadraturaBazen}}</span>
+                <span *ngIf="!o.kvadraturaBazen">0</span>
+            </td>
+            <td class="tabelaCelija">
+                <span *ngIf="o.kvadraturaFontana">{{o.kvadraturaFontana}}</span>
+                <span *ngIf="!o.kvadraturaFontana">0</span>
+            </td>
+            <td class="tabelaCelija">{{ispisStatusa(o)}}</td>
+         </tr>
+    </table>
+</body>

@@ -1,0 +1,681 @@
+[{
+  "_id": {
+    "$oid": "66edbe8cc08077ce622b3521"
+  },
+  "korisnik": "farmer",
+  "firma": "Beobasta",
+  "datumVreme": "2024-09-20T20:27",
+  "kvadraturaUkupno": 1,
+  "tip": "privatna",
+  "opis": "",
+  "usluge": [],
+  "kvadraturaZelenilo": 0,
+  "status": "zavrseno",
+  "trenutakZakazivanja": "Fri Sep 20 2024 20:27:24 GMT+0200 (Средњеевропско летње време)",
+  "komentar": "Dobar",
+  "ocena": 3,
+  "dekorater": "ana",
+  "poslednjeOdrzavanje": "2024-09-20T20:27",
+  "kvadraturaBazen": 0,
+  "kvadraturaNamestaj": 0,
+  "izgledBaste": [
+    {
+      "tip": "pravougaonik",
+      "boja": "green",
+      "x": 200,
+      "y": 100,
+      "sirina": 100,
+      "visina": 50,
+      "_id": {
+        "$oid": "66edbe8cc08077ce622b3522"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "brown",
+      "x": 150,
+      "y": 200,
+      "poluprecnik": 25,
+      "_id": {
+        "$oid": "66edbe8cc08077ce622b3523"
+      }
+    },
+    {
+      "tip": "pravougaonik",
+      "boja": "blue",
+      "x": 350,
+      "y": 150,
+      "sirina": 50,
+      "visina": 80,
+      "_id": {
+        "$oid": "66edbe8cc08077ce622b3524"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "blue",
+      "x": 400,
+      "y": 250,
+      "poluprecnik": 15,
+      "_id": {
+        "$oid": "66edbe8cc08077ce622b3525"
+      }
+    }
+  ],
+  "__v": 0,
+  "slikaPosla": "1726857227728.jpg"
+},
+{
+  "_id": {
+    "$oid": "66eea530d5be3707ee2e1f19"
+  },
+  "korisnik": "farmer",
+  "firma": "Basta Plus",
+  "datumVreme": "2023-02-21T12:50",
+  "kvadraturaUkupno": 150,
+  "tip": "privatna",
+  "opis": "Test za odrzavanje",
+  "usluge": [
+    "Postavljanje staze"
+  ],
+  "kvadraturaZelenilo": 50,
+  "status": "zavrseno",
+  "trenutakZakazivanja": "Sat Sep 21 2024 12:51:28 GMT+0200 (Средњеевропско летње време)",
+  "komentar": "Sasvim solidno",
+  "ocena": 4,
+  "dekorater": "hobin",
+  "poslednjeOdrzavanje": "2024-10-15T12:00",
+  "kvadraturaBazen": 50,
+  "kvadraturaNamestaj": 50,
+  "izgledBaste": [
+    {
+      "tip": "pravougaonik",
+      "boja": "green",
+      "x": 200,
+      "y": 100,
+      "sirina": 100,
+      "visina": 50,
+      "_id": {
+        "$oid": "66eea530d5be3707ee2e1f1a"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "brown",
+      "x": 150,
+      "y": 200,
+      "poluprecnik": 25,
+      "_id": {
+        "$oid": "66eea530d5be3707ee2e1f1b"
+      }
+    },
+    {
+      "tip": "pravougaonik",
+      "boja": "blue",
+      "x": 350,
+      "y": 150,
+      "sirina": 50,
+      "visina": 80,
+      "_id": {
+        "$oid": "66eea530d5be3707ee2e1f1c"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "blue",
+      "x": 400,
+      "y": 250,
+      "poluprecnik": 15,
+      "_id": {
+        "$oid": "66eea530d5be3707ee2e1f1d"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eea6a5d5be3707ee2e2015"
+  },
+  "korisnik": "krompirko",
+  "firma": "Beobasta",
+  "datumVreme": "2023-09-21T12:57",
+  "kvadraturaUkupno": 200,
+  "tip": "restoranska",
+  "opis": "Test za odrzavanja",
+  "usluge": [
+    "Ciscenje bazena",
+    "Sadjenje cveca"
+  ],
+  "kvadraturaZelenilo": 100,
+  "status": "odrzavanje",
+  "trenutakZakazivanja": "Sat Sep 21 2024 12:57:41 GMT+0200 (Средњеевропско летње време)",
+  "komentar": "Odlicno! Bas sam zadovoljan! Preporucujem prijateljima",
+  "ocena": 5,
+  "dekorater": "ana",
+  "poslednjeOdrzavanje": "2023-09-21T12:57",
+  "kvadraturaFontana": 20,
+  "brojStolova": 10,
+  "brojStolica": 50,
+  "izgledBaste": [
+    {
+      "tip": "pravougaonik",
+      "boja": "green",
+      "x": 200,
+      "y": 100,
+      "sirina": 100,
+      "visina": 50,
+      "_id": {
+        "$oid": "66eea6a5d5be3707ee2e2016"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "brown",
+      "x": 150,
+      "y": 200,
+      "poluprecnik": 25,
+      "_id": {
+        "$oid": "66eea6a5d5be3707ee2e2017"
+      }
+    },
+    {
+      "tip": "pravougaonik",
+      "boja": "blue",
+      "x": 350,
+      "y": 150,
+      "sirina": 50,
+      "visina": 80,
+      "_id": {
+        "$oid": "66eea6a5d5be3707ee2e2018"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "blue",
+      "x": 400,
+      "y": 250,
+      "poluprecnik": 15,
+      "_id": {
+        "$oid": "66eea6a5d5be3707ee2e2019"
+      }
+    }
+  ],
+  "__v": 0,
+  "slikaPosla": "1726916939479.jpg"
+},
+{
+  "_id": {
+    "$oid": "66eeaa7190e678baa9569e0f"
+  },
+  "korisnik": "krompirko",
+  "firma": "Beobasta",
+  "datumVreme": "2024-10-01T13:13",
+  "kvadraturaUkupno": 50,
+  "tip": "privatna",
+  "opis": "Samo travnjak",
+  "usluge": [
+    "Sadjenje cveca"
+  ],
+  "kvadraturaZelenilo": 50,
+  "status": "prihvaceno",
+  "trenutakZakazivanja": "Sat Sep 21 2024 13:13:53 GMT+0200 (Средњеевропско летње време)",
+  "komentar": "",
+  "ocena": 0,
+  "dekorater": "ana",
+  "poslednjeOdrzavanje": "2024-10-01T13:13",
+  "kvadraturaBazen": 0,
+  "kvadraturaNamestaj": 0,
+  "izgledBaste": [
+    {
+      "tip": "pravougaonik",
+      "boja": "green",
+      "x": 200,
+      "y": 100,
+      "sirina": 100,
+      "visina": 50,
+      "_id": {
+        "$oid": "66eeaa7190e678baa9569e10"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "brown",
+      "x": 150,
+      "y": 200,
+      "poluprecnik": 25,
+      "_id": {
+        "$oid": "66eeaa7190e678baa9569e11"
+      }
+    },
+    {
+      "tip": "pravougaonik",
+      "boja": "blue",
+      "x": 350,
+      "y": 150,
+      "sirina": 50,
+      "visina": 80,
+      "_id": {
+        "$oid": "66eeaa7190e678baa9569e12"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "blue",
+      "x": 400,
+      "y": 250,
+      "poluprecnik": 15,
+      "_id": {
+        "$oid": "66eeaa7190e678baa9569e13"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eeaae190e678baa9569e15"
+  },
+  "korisnik": "krompirko",
+  "firma": "Beobasta",
+  "datumVreme": "2027-05-01T13:14",
+  "kvadraturaUkupno": 250,
+  "tip": "restoranska",
+  "opis": "Zakazivanje daleko u buducnosti",
+  "usluge": [],
+  "kvadraturaZelenilo": 50,
+  "status": "prihvaceno",
+  "trenutakZakazivanja": "Sat Sep 21 2024 13:15:45 GMT+0200 (Средњеевропско летње време)",
+  "komentar": "",
+  "ocena": 0,
+  "dekorater": "ana",
+  "poslednjeOdrzavanje": "2027-05-01T13:14",
+  "kvadraturaFontana": 10,
+  "brojStolova": 20,
+  "brojStolica": 50,
+  "izgledBaste": [
+    {
+      "tip": "pravougaonik",
+      "boja": "green",
+      "x": 200,
+      "y": 100,
+      "sirina": 100,
+      "visina": 50,
+      "_id": {
+        "$oid": "66eeaae190e678baa9569e16"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "brown",
+      "x": 150,
+      "y": 200,
+      "poluprecnik": 25,
+      "_id": {
+        "$oid": "66eeaae190e678baa9569e17"
+      }
+    },
+    {
+      "tip": "pravougaonik",
+      "boja": "blue",
+      "x": 350,
+      "y": 150,
+      "sirina": 50,
+      "visina": 80,
+      "_id": {
+        "$oid": "66eeaae190e678baa9569e18"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "blue",
+      "x": 400,
+      "y": 250,
+      "poluprecnik": 15,
+      "_id": {
+        "$oid": "66eeaae190e678baa9569e19"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eeab3b90e678baa9569e7c"
+  },
+  "korisnik": "krompirko",
+  "firma": "Beobasta",
+  "datumVreme": "2024-10-01T13:16",
+  "kvadraturaUkupno": 60,
+  "tip": "privatna",
+  "opis": "Travnjak sa stolom",
+  "usluge": [
+    "Sadjenje cveca"
+  ],
+  "kvadraturaZelenilo": 50,
+  "status": "prihvaceno",
+  "trenutakZakazivanja": "Sat Sep 21 2024 13:17:15 GMT+0200 (Средњеевропско летње време)",
+  "komentar": "",
+  "ocena": 0,
+  "dekorater": "pera",
+  "poslednjeOdrzavanje": "2024-10-01T13:16",
+  "kvadraturaBazen": 0,
+  "kvadraturaNamestaj": 10,
+  "izgledBaste": [
+    {
+      "tip": "pravougaonik",
+      "boja": "green",
+      "x": 200,
+      "y": 100,
+      "sirina": 100,
+      "visina": 50,
+      "_id": {
+        "$oid": "66eeab3b90e678baa9569e7d"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "brown",
+      "x": 150,
+      "y": 200,
+      "poluprecnik": 25,
+      "_id": {
+        "$oid": "66eeab3b90e678baa9569e7e"
+      }
+    },
+    {
+      "tip": "pravougaonik",
+      "boja": "blue",
+      "x": 350,
+      "y": 150,
+      "sirina": 50,
+      "visina": 80,
+      "_id": {
+        "$oid": "66eeab3b90e678baa9569e7f"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "blue",
+      "x": 400,
+      "y": 250,
+      "poluprecnik": 15,
+      "_id": {
+        "$oid": "66eeab3b90e678baa9569e80"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eeab7090e678baa9569ea7"
+  },
+  "korisnik": "krompirko",
+  "firma": "Beobasta",
+  "datumVreme": "2024-09-21T13:17",
+  "kvadraturaUkupno": 100,
+  "tip": "privatna",
+  "opis": "Veliki bazen u dvoristu",
+  "usluge": [
+    "Ciscenje bazena"
+  ],
+  "kvadraturaZelenilo": 0,
+  "status": "zavrseno",
+  "trenutakZakazivanja": "Sat Sep 21 2024 13:18:08 GMT+0200 (Средњеевропско летње време)",
+  "komentar": "",
+  "ocena": 3,
+  "dekorater": "pera",
+  "poslednjeOdrzavanje": "2024-09-21T13:17",
+  "kvadraturaBazen": 100,
+  "kvadraturaNamestaj": 0,
+  "izgledBaste": [
+    {
+      "tip": "pravougaonik",
+      "boja": "green",
+      "x": 200,
+      "y": 100,
+      "sirina": 100,
+      "visina": 50,
+      "_id": {
+        "$oid": "66eeab7090e678baa9569ea8"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "brown",
+      "x": 150,
+      "y": 200,
+      "poluprecnik": 25,
+      "_id": {
+        "$oid": "66eeab7090e678baa9569ea9"
+      }
+    },
+    {
+      "tip": "pravougaonik",
+      "boja": "blue",
+      "x": 350,
+      "y": 150,
+      "sirina": 50,
+      "visina": 80,
+      "_id": {
+        "$oid": "66eeab7090e678baa9569eaa"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "blue",
+      "x": 400,
+      "y": 250,
+      "poluprecnik": 15,
+      "_id": {
+        "$oid": "66eeab7090e678baa9569eab"
+      }
+    }
+  ],
+  "__v": 0,
+  "slikaPosla": "1726917515650.jpg"
+},
+{
+  "_id": {
+    "$oid": "66efe5501d6b380b0b1c7eb3"
+  },
+  "korisnik": "krompirko",
+  "firma": "Biljni Zivot",
+  "datumVreme": "2024-09-22T11:36",
+  "kvadraturaUkupno": 100,
+  "tip": "privatna",
+  "opis": "Primer odbijenog zakazivanja",
+  "usluge": [],
+  "kvadraturaZelenilo": 100,
+  "status": "odbijeno",
+  "trenutakZakazivanja": "Sun Sep 22 2024 11:37:20 GMT+0200 (Средњеевропско летње време)",
+  "komentar": "Primer odbijenog zakazivanja",
+  "ocena": 0,
+  "dekorater": "",
+  "poslednjeOdrzavanje": "2024-09-22T11:36",
+  "kvadraturaBazen": 0,
+  "kvadraturaNamestaj": 0,
+  "izgledBaste": [
+    {
+      "tip": "pravougaonik",
+      "boja": "green",
+      "x": 200,
+      "y": 100,
+      "sirina": 100,
+      "visina": 50,
+      "_id": {
+        "$oid": "66efe5501d6b380b0b1c7eb4"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "brown",
+      "x": 150,
+      "y": 200,
+      "poluprecnik": 25,
+      "_id": {
+        "$oid": "66efe5501d6b380b0b1c7eb5"
+      }
+    },
+    {
+      "tip": "pravougaonik",
+      "boja": "blue",
+      "x": 350,
+      "y": 150,
+      "sirina": 50,
+      "visina": 80,
+      "_id": {
+        "$oid": "66efe5501d6b380b0b1c7eb6"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "blue",
+      "x": 400,
+      "y": 250,
+      "poluprecnik": 15,
+      "_id": {
+        "$oid": "66efe5501d6b380b0b1c7eb7"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66efe64e1d6b380b0b1c7fb2"
+  },
+  "korisnik": "krompirko",
+  "firma": "Biljni Zivot",
+  "datumVreme": "2024-09-22T11:40",
+  "kvadraturaUkupno": 300,
+  "tip": "privatna",
+  "opis": "Veliko vestacko jezero",
+  "usluge": [
+    "Sadjenje drveca"
+  ],
+  "kvadraturaZelenilo": 25,
+  "status": "zavrseno",
+  "trenutakZakazivanja": "Sun Sep 22 2024 11:41:34 GMT+0200 (Средњеевропско летње време)",
+  "komentar": "",
+  "ocena": 4,
+  "dekorater": "joca",
+  "poslednjeOdrzavanje": "2024-09-22T11:40",
+  "kvadraturaBazen": 250,
+  "kvadraturaNamestaj": 25,
+  "izgledBaste": [
+    {
+      "tip": "pravougaonik",
+      "boja": "green",
+      "x": 200,
+      "y": 100,
+      "sirina": 100,
+      "visina": 50,
+      "_id": {
+        "$oid": "66efe64e1d6b380b0b1c7fb3"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "brown",
+      "x": 150,
+      "y": 200,
+      "poluprecnik": 25,
+      "_id": {
+        "$oid": "66efe64e1d6b380b0b1c7fb4"
+      }
+    },
+    {
+      "tip": "pravougaonik",
+      "boja": "blue",
+      "x": 350,
+      "y": 150,
+      "sirina": 50,
+      "visina": 80,
+      "_id": {
+        "$oid": "66efe64e1d6b380b0b1c7fb5"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "blue",
+      "x": 400,
+      "y": 250,
+      "poluprecnik": 15,
+      "_id": {
+        "$oid": "66efe64e1d6b380b0b1c7fb6"
+      }
+    }
+  ],
+  "__v": 0,
+  "slikaPosla": "1726998142794.jpg"
+},
+{
+  "_id": {
+    "$oid": "66f011471d6b380b0b1c8259"
+  },
+  "korisnik": "krompirko",
+  "firma": "Biljni Zivot",
+  "datumVreme": "2024-09-30T14:43",
+  "kvadraturaUkupno": 5,
+  "tip": "privatna",
+  "opis": "puno cveca",
+  "usluge": [
+    "Sadjenje drveca"
+  ],
+  "kvadraturaZelenilo": 3,
+  "status": "aktivno",
+  "trenutakZakazivanja": "Sun Sep 22 2024 14:44:55 GMT+0200 (Средњеевропско летње време)",
+  "komentar": "",
+  "ocena": 0,
+  "dekorater": "",
+  "poslednjeOdrzavanje": "2024-09-30T14:43",
+  "kvadraturaBazen": 0,
+  "kvadraturaNamestaj": 2,
+  "izgledBaste": [
+    {
+      "tip": "pravougaonik",
+      "boja": "green",
+      "x": 200,
+      "y": 100,
+      "sirina": 100,
+      "visina": 50,
+      "_id": {
+        "$oid": "66f011471d6b380b0b1c825a"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "brown",
+      "x": 150,
+      "y": 200,
+      "poluprecnik": 25,
+      "_id": {
+        "$oid": "66f011471d6b380b0b1c825b"
+      }
+    },
+    {
+      "tip": "pravougaonik",
+      "boja": "blue",
+      "x": 350,
+      "y": 150,
+      "sirina": 50,
+      "visina": 80,
+      "_id": {
+        "$oid": "66f011471d6b380b0b1c825c"
+      }
+    },
+    {
+      "tip": "krug",
+      "boja": "blue",
+      "x": 400,
+      "y": 250,
+      "poluprecnik": 15,
+      "_id": {
+        "$oid": "66f011471d6b380b0b1c825d"
+      }
+    }
+  ],
+  "__v": 0
+}]

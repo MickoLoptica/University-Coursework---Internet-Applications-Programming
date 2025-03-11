@@ -1,0 +1,85 @@
+<body class="telo">
+    <div class="naslov">Ваша машта - ваша башта</div>
+    <form (ngSubmit)="prijava()" #registrationForm="ngForm" class="forma">
+        <table>
+            <tr>
+                <td>Корисничко име: </td>
+                <td><input type="text" [(ngModel)]="korisnickoIme" name="korisnickoIme"></td>
+            </tr>
+            <tr>
+                <td>Лозинка: </td>
+                <td><input type="password" [(ngModel)]="lozinka" name="lozinka"></td>
+            </tr>
+        </table>
+        <button type="submit" class="dugme">Пријави се</button>
+        <button (click)="registracija()" class="dugme">Региструј се</button>
+        <button (click)="promeniLozinku()" class="dugme">Промени лозинку</button>
+    </form>
+    <p class="error">{{greska}}</p>
+    <div class="podnaslov">Статистика</div>
+    <table class="tabela">
+        <tr>
+            <th class="tabelaCelija">Број декорисаних башти: </th>
+            <th class="tabelaCelija">Број власника: </th>
+            <th class="tabelaCelija">Број декоратера: </th>
+        </tr>
+        <tr>
+            <td class="tabelaCelija">{{brojDekorisanihBasti}}</td>
+            <td class="tabelaCelija">{{brojVlasnika}}</td>
+            <td class="tabelaCelija">{{brojDekoratera}}</td>
+        </tr>
+    </table>
+    <br>
+    <span class="tekst">Број декорисаних башти у последњих: </span>
+    <table class="tabela">
+        <tr>
+            <th class="tabelaCelija">24 сата</th>
+            <th class="tabelaCelija">7 дана</th>
+            <th class="tabelaCelija">30 дана</th>
+        </tr>
+        <tr>
+            <td class="tabelaCelija">{{brojBastiDanas()}}</td>
+            <td class="tabelaCelija">{{brojBastiNedelja()}}</td>
+            <td class="tabelaCelija">{{brojBastiMesec()}}</td>
+        </tr>
+    </table>
+    <div class="podnaslov">Фирме</div>
+    <span *ngIf="firme.length == 0" class="tekst">Тренутно нема фирми у систему.</span>
+    <div *ngIf="firme.length != 0">
+        <input type="text" name="pretragaNaziv" [(ngModel)]="pretragaNaziv" placeholder="Унесите назив фирме" class="pretraga">
+        <input type="text" name="pretragaAdresa" [(ngModel)]="pretragaAdresa" placeholder="Унесите адресу фирме" class="pretraga">
+        <table class="tabela">
+            <tr>
+            <th class="tabelaCelijaAktivna" (click)="sortirajPo('naziv')"><a>Назив</a>
+                <span *ngIf="parametarSortiranja === 'naziv'">
+                    {{ neopadajuceSortiranje ? '▼' : '▲' }}
+                </span>
+            </th>
+            <th class="tabelaCelijaAktivna" (click)="sortirajPo('adresa')">Адреса
+                <span *ngIf="parametarSortiranja === 'adresa'">
+                    {{ neopadajuceSortiranje ? '▼' : '▲' }}
+                </span>
+            </th>
+            <th class="tabelaCelija">Ангажовани декоратери</th>
+            </tr>
+            <tr *ngFor="let f of sortirajFirme()">
+            <td class="tabelaCelija">{{f.naziv}}</td>
+            <td class="tabelaCelija">{{f.adresa}}</td>
+            <td class="tabelaCelija">{{f.dekorateri}}</td>
+            </tr>
+        </table>
+    </div>
+    <br><br><br>
+    <div class="podnaslov">Галерија</div>
+    <table>
+        <td>
+            <img class="slika" [src]="'http://localhost:4000/pictures/gallery/' + prvaSlika" alt="galerija">
+        </td>
+        <td>
+            <img class="slika" [src]="'http://localhost:4000/pictures/gallery/' + drugaSlika" alt="galerija">
+        </td>
+        <td>
+            <img class="slika" [src]="'http://localhost:4000/pictures/gallery/' + trecaSlika" alt="galerija">
+        </td>
+    </table>
+</body>

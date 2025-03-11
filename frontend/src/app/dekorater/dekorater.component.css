@@ -1,0 +1,17 @@
+.telo {
+    background-color: #F5F5DC;
+    min-height: 100vh;
+    margin: -8px;
+    margin-top: -20px;
+    padding: 0;
+}
+
+.podaci {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 20px;
+}
+
+.dugme {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px;
+}

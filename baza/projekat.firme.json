@@ -1,0 +1,154 @@
+[{
+  "_id": {
+    "$oid": "66ed91e44ad385e07979cccf"
+  },
+  "naziv": "Beobasta",
+  "adresa": "Elektrotehnicki fakultet, Beograd",
+  "lokacija": {
+    "geografskaSirina": 44.805643064533925,
+    "geografskaDuzina": 20.476238513365395,
+    "_id": {
+      "$oid": "66ed91e44ad385e07979ccd0"
+    }
+  },
+  "usluge": [
+    {
+      "naziv": "Ciscenje bazena",
+      "cena": 20000,
+      "_id": {
+        "$oid": "66ed91e44ad385e07979ccd1"
+      }
+    },
+    {
+      "naziv": "Sadjenje cveca",
+      "cena": 5000,
+      "_id": {
+        "$oid": "66ed91e44ad385e07979ccd2"
+      }
+    }
+  ],
+  "odmorPocetak": {
+    "mesec": 6,
+    "dan": 15,
+    "_id": {
+      "$oid": "66ed91e44ad385e07979ccd3"
+    }
+  },
+  "odmorKraj": {
+    "mesec": 7,
+    "dan": 15,
+    "_id": {
+      "$oid": "66ed91e44ad385e07979ccd4"
+    }
+  },
+  "dekorateri": [
+    "Ana Bastovanovic",
+    "Petar Bastovanovic",
+    "Cveta Lepojevic"
+  ],
+  "telefon": "+3811111111",
+  "komentari": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ed93274ad385e07979ccee"
+  },
+  "naziv": "Basta Plus",
+  "adresa": "Bastovanovica 25, Bastovangrad",
+  "lokacija": {
+    "geografskaSirina": 44.76440868903362,
+    "geografskaDuzina": 20.297158062458042,
+    "_id": {
+      "$oid": "66ed93274ad385e07979ccef"
+    }
+  },
+  "usluge": [
+    {
+      "naziv": "Postavljanje staze",
+      "cena": 30000,
+      "_id": {
+        "$oid": "66ed93274ad385e07979ccf0"
+      }
+    },
+    {
+      "naziv": "Sadjenje cveca",
+      "cena": 6000,
+      "_id": {
+        "$oid": "66ed93274ad385e07979ccf1"
+      }
+    },
+    {
+      "naziv": "Zalivanje travnjaka",
+      "cena": 2500,
+      "_id": {
+        "$oid": "66ed93274ad385e07979ccf2"
+      }
+    }
+  ],
+  "odmorPocetak": {
+    "mesec": 5,
+    "dan": 1,
+    "_id": {
+      "$oid": "66ed93274ad385e07979ccf3"
+    }
+  },
+  "odmorKraj": {
+    "mesec": 6,
+    "dan": 1,
+    "_id": {
+      "$oid": "66ed93274ad385e07979ccf4"
+    }
+  },
+  "dekorateri": [
+    "Miodrag Dekoratov",
+    "Zivorad Bastovanski"
+  ],
+  "telefon": "+441111111",
+  "komentari": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eeba35a65ce9376b23679a"
+  },
+  "naziv": "Biljni Zivot",
+  "adresa": "Lepog cveca 10, Bastovangrad",
+  "lokacija": {
+    "geografskaSirina": 44.81533248384247,
+    "geografskaDuzina": 20.454228222370148,
+    "_id": {
+      "$oid": "66eeba35a65ce9376b23679b"
+    }
+  },
+  "usluge": [
+    {
+      "naziv": "Sadjenje drveca",
+      "cena": 5000,
+      "_id": {
+        "$oid": "66eeba35a65ce9376b23679c"
+      }
+    }
+  ],
+  "odmorPocetak": {
+    "mesec": 11,
+    "dan": 15,
+    "_id": {
+      "$oid": "66eeba35a65ce9376b23679d"
+    }
+  },
+  "odmorKraj": {
+    "mesec": 0,
+    "dan": 15,
+    "_id": {
+      "$oid": "66eeba35a65ce9376b23679e"
+    }
+  },
+  "dekorateri": [
+    "Jovan Uredjanovic",
+    "Milutin Hadzi-Dekoratorovic"
+  ],
+  "telefon": "+3811234567",
+  "komentari": [],
+  "__v": 0
+}]

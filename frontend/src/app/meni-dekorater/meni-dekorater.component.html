@@ -1,0 +1,9 @@
+<body class="telo">
+    <div class="naslov">Ваша машта - ваша башта</div>
+    <div class="meni"> 
+        <a [routerLink]="['/dekorater']" class="meniLink" [class.blokiranLink]="proveriAktivnuStranicu('/dekorater')">Профил</a> | 
+        <a [routerLink]="['/zakazivanjaDekorater']" class="meniLink" [class.blokiranLink]="proveriAktivnuStranicu('/zakazivanjaDekorater')">Заказивања</a> |
+        <a [routerLink]="['/odrzavanjeDekorater']" class="meniLink" [class.blokiranLink]="proveriAktivnuStranicu('/odrzavanjeDekorater')">Одржавања</a> |
+        <a [routerLink]="['/statistika']" class="meniLink" [class.blokiranLink]="proveriAktivnuStranicu('/statistika')">Статистика</a>
+    </div>
+</body>

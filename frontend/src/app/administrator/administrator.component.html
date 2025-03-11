@@ -1,0 +1,108 @@
+<body class="telo">
+  <div class="naslov">Ваша машта - ваша башта</div>
+  <div class="podnaslov">Администратор</div>
+  <button (click)="odjava()" class="dugme">Излогуј се</button><br>
+  <br>
+  <div class="podnaslov">Власници у систему</div>
+  <span *ngIf="vlasnici.length == 0" class="tekst">Нема регистрованих власника у систему</span>
+  <table *ngIf="vlasnici.length != 0" class="tabela">
+    <tr>
+      <th class="tabelaCelija">Корисничко име</th>
+      <th class="tabelaCelija">Име</th>
+      <th class="tabelaCelija">Презиме</th>
+      <th class="tabelaCelija">Адреса</th>
+      <th class="tabelaCelija">Контакт телефон</th>
+      <th class="tabelaCelija">Имејл адреса</th>
+      <th class="tabelaCelija">Опције</th>
+    </tr>
+    <tr *ngFor="let v of vlasnici">
+      <td class="tabelaCelija">{{v.korisnickoIme}}</td>
+      <td class="tabelaCelija">{{v.ime}}</td>
+      <td class="tabelaCelija">{{v.prezime}}</td>
+      <td class="tabelaCelija">{{v.adresa}}</td>
+      <td class="tabelaCelija">{{v.telefon}}</td>
+      <td class="tabelaCelija">{{v.imejl}}</td>
+      <td class="tabelaCelija">
+        <button (click)="azuriranje(v)" class="dugme">Ажурирај податке</button>
+        <button *ngIf="v.deaktiviran == 'ne'" (click)="deaktivirajKorisnika(v)" class="dugme">Деактивирај</button>
+        <button *ngIf="v.deaktiviran == 'da'" (click)="aktivirajKorisnika(v)" class="dugme">Активирај</button>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <div class="podnaslov">Декоратери у систему</div>
+  <span *ngIf="dekorateri.length == 0" class="tekst">Нема регистрованих декоратера у систему</span>
+  <table *ngIf="dekorateri.length != 0" class="tabela">
+    <tr>
+      <th class="tabelaCelija">Корисничко име</th>
+      <th class="tabelaCelija">Име</th>
+      <th class="tabelaCelija">Презиме</th>
+      <th class="tabelaCelija">Адреса</th>
+      <th class="tabelaCelija">Контакт телефон</th>
+      <th class="tabelaCelija">Имејл адреса</th>
+      <th class="tabelaCelija">Опције</th>
+    </tr>
+    <tr *ngFor="let d of dekorateri">
+      <td class="tabelaCelija">{{d.korisnickoIme}}</td>
+      <td class="tabelaCelija">{{d.ime}}</td>
+      <td class="tabelaCelija">{{d.prezime}}</td>
+      <td class="tabelaCelija">{{d.adresa}}</td>
+      <td class="tabelaCelija">{{d.telefon}}</td>
+      <td class="tabelaCelija">{{d.imejl}}</td>
+      <td class="tabelaCelija">
+        <button (click)="azuriranje(d)" class="dugme">Ажурирај податке</button>
+        <button *ngIf="d.deaktiviran == 'ne'" (click)="deaktivirajKorisnika(d)" class="dugme">Деактивирај</button>
+        <button *ngIf="d.deaktiviran == 'da'" (click)="aktivirajKorisnika(d)" class="dugme">Активирај</button>
+        <button *ngIf="d.blokiran == 'ne'" (click)="blokirajDekoratera(d)" class="dugme">Блокирај</button>
+        <button *ngIf="d.blokiran == 'da'" (click)="odblokirajDekoratera(d)" class="dugme">Одблокирај</button>
+      </td>
+    </tr>
+  </table>
+  <button (click)="dodajDekoratera()" class="dugme">Додај декоратера</button>
+  <br>
+  <div class="podnaslov">Фирме у систему</div>
+  <span *ngIf="firme.length == 0" class="tekst">Нема регистрованих фирми у систему</span>
+  <table *ngIf="firme.length != 0" class="tabela">
+    <tr>
+      <th class="tabelaCelija">Назив</th>
+      <th class="tabelaCelija">Адреса</th>
+      <th class="tabelaCelija">Декоратери</th>
+      <th class="tabelaCelija">Контакт телефон</th>
+      <th class="tabelaCelija">Оцена</th>
+    </tr>
+    <tr *ngFor="let f of firme">
+      <td class="tabelaCelija">{{f.naziv}}</td>
+      <td class="tabelaCelija">{{f.adresa}}</td>
+      <td class="tabelaCelija">{{f.dekorateri}}</td>
+      <td class="tabelaCelija">{{f.telefon}}</td>
+      <td class="tabelaCelija">{{izracunajOcenu(f)}}</td>
+    </tr>
+  </table>
+  <button (click)="dodajFirmu()" class="dugme">Додај фирму</button>
+  <br>
+  <div class="podnaslov">Захтеви за регистрацију</div>
+  <span *ngIf="zahtevi.length == 0" class="tekst">Нема пристиглих захтева за регистрацију</span>
+  <table *ngIf="zahtevi.length != 0" class="tabela">
+    <tr>
+      <th class="tabelaCelija">Корисничко име</th>
+      <th class="tabelaCelija">Име</th>
+      <th class="tabelaCelija">Презиме</th>
+      <th class="tabelaCelija">Адреса</th>
+      <th class="tabelaCelija">Контакт телефон</th>
+      <th class="tabelaCelija">Имејл адреса</th>
+      <th class="tabelaCelija">Опције</th>
+    </tr>
+    <tr *ngFor="let z of zahtevi">
+      <td class="tabelaCelija">{{z.korisnickoIme}}</td>
+      <td class="tabelaCelija">{{z.ime}}</td>
+      <td class="tabelaCelija">{{z.prezime}}</td>
+      <td class="tabelaCelija">{{z.adresa}}</td>
+      <td class="tabelaCelija">{{z.telefon}}</td>
+      <td class="tabelaCelija">{{z.imejl}}</td>
+      <td class="tabelaCelija">
+        <button (click)="odobriZahtev(z)" class="dugme">Одобри</button>
+        <button (click)="odbaciZahtev(z)" class="dugme">Одбаци</button>
+      </td>
+    </tr>
+  </table>
+</body>

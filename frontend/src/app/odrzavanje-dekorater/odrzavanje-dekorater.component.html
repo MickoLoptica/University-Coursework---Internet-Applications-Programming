@@ -1,0 +1,36 @@
+<app-meni-dekorater></app-meni-dekorater>
+<body class="telo">
+    <div class="podnaslov">Тренутни захтеви</div>
+    <span *ngIf="zahtevi.length==0" class="tekst">Нема тренутних захтева.</span>
+    <table *ngIf="zahtevi.length!=0" class="tabela">
+        <tr>
+            <th class="tabelaCelija">Корисник</th>
+            <th class="tabelaCelija">Квадратура базена</th>
+            <th class="tabelaCelija">Квадратура фонтана</th>
+            <th class="tabelaCelija">Опције</th>
+        </tr> 
+        <tr *ngFor="let z of zahtevi">
+            <td class="tabelaCelija">{{z.korisnik}}</td>
+            <td class="tabelaCelija">
+                <span *ngIf="z.kvadraturaBazen">{{z.kvadraturaBazen}}</span>
+                <span *ngIf="!z.kvadraturaBazen">0</span>
+            </td>
+            <td class="tabelaCelija">
+                <span *ngIf="z.kvadraturaFontana">{{z.kvadraturaFontana}}</span>
+                <span *ngIf="!z.kvadraturaFontana">0</span>
+            </td>
+            <td class="tabelaCelija">
+                <div *ngIf="!odrzavaSe || z != izabranoOdrzavanje">
+                    <button (click)="prihvatiOdrzavanje(z)" class="dugme">Прихвати</button>
+                    <button (click)="odbijOdrzavanje(z)" class="dugme">Одбиј</button>
+                </div>
+                <div *ngIf="odrzavaSe && z == izabranoOdrzavanje">
+                    <span class="tekst">Изаберите време одржавања: </span><br>
+                    <input type="datetime-local" [(ngModel)]="vremeOdrzavanja" name="vremeOdrzavanja" [min]="trenutnoVreme"><br>
+                    <button (click)="odrzi()" class="dugme">Одржи</button>
+                    <button (click)="odustani()" class="dugme">Одустани</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>

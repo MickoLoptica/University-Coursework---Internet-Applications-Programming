@@ -1,0 +1,65 @@
+<app-meni-vlasnik></app-meni-vlasnik>
+<body class="telo">
+    <div class="podnaslov">Тренутна заказивања</div> 
+    <span *ngIf="zakazivanja.length==0" class="tekst">Нисте заказали ниједно уређивање.</span>
+    <table *ngIf="zakazivanja.length!=0" class="tabela">
+        <tr>
+            <th class="tabelaCelija">Датум заказивања</th>
+            <th class="tabelaCelija">Датум израде</th>
+            <th class="tabelaCelija">Фирма</th>
+            <th class="tabelaCelija">Тражене услуге</th>
+            <th class="tabelaCelija">Статус</th>
+            <th class="tabelaCelija">Опције</th>
+        </tr> 
+        <tr *ngFor="let z of zakazivanja">
+            <td class="tabelaCelija">{{ispisDatuma(z.trenutakZakazivanja)}}</td>
+            <td class="tabelaCelija">{{ispisDatuma(z.datumVreme)}}</td>
+            <td class="tabelaCelija">{{z.firma}}</td>
+            <td class="tabelaCelija">{{ispisUsluga(z)}}</td>
+            <td class="tabelaCelija">{{ispisStatusa(z)}}</td>
+            <td class="tabelaCelija">
+                <span *ngIf="!moguceOtkazivanje(z)">/</span>
+                <button *ngIf="moguceOtkazivanje(z)" (click)="otkazi(z)" class="dugme">Откажи</button>
+            </td>
+         </tr>
+     </table>
+     <br><br><br>
+     <div class="podnaslov">Архива заказивања</div>
+     <span *ngIf="arhiva.length==0" class="tekst">Архива заказивања је празна.</span>
+     <table *ngIf="arhiva.length!=0" class="tabela">
+        <tr>
+            <th class="tabelaCelija">Датум израде</th>
+            <th class="tabelaCelija">Фирма</th>
+            <th class="tabelaCelija">Статус</th>
+            <th class="tabelaCelija">Коментар</th>
+        </tr> 
+        <tr *ngFor="let a of arhiva">
+            <td class="tabelaCelija">{{ispisDatuma(a.datumVreme)}}</td>
+            <td class="tabelaCelija">{{a.firma}}</td>
+            <td class="tabelaCelija">{{ispisStatusa(a)}}</td>
+            <td *ngIf="a.ocena!=0" class="tabelaCelija">{{nacrtajZvezdice(a)}} - {{a.komentar}}</td>
+            <td *ngIf="a.ocena==0" class="tabelaCelija">
+                <div *ngIf="(!pisanjeKomentara || a!=izabranoZakazivanje) && a.status!='odbijeno'">
+                    <button (click)="komentarisi(a)" class="dugme">Остави коментар</button>
+                </div>
+                <div *ngIf="a.status=='odbijeno'">
+                    <span class="tekst">{{a.komentar}}</span>
+                </div>
+                <div *ngIf="pisanjeKomentara && a==izabranoZakazivanje" class="forma">
+                    <span class="tekst">Оставите оцену и коментар: </span>
+                    <div class="zvezdice">
+                        <span *ngFor="let zvezdica of [1,2,3,4,5]" (click)="odaberiOcenu(zvezdica)">
+                            <span [ngClass]="zvezdica <= ocena ? 'punaZvezdica' : 'praznaZvezdica'">★</span>
+                        </span>
+                    </div>
+                    <br>
+                    <textarea [(ngModel)]="komentar" placeholder="Унесите коментар"></textarea>
+                    <br>
+                    <button (click)="ostaviKomentar()" class="dugme">Пошаљи</button>
+                    <button (click)="odustani()" class="dugme">Одустани</button>
+                </div>
+            </td>
+         </tr>
+     </table>
+     <span class="error">{{greska}}</span><br>
+ </body>

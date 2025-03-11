@@ -1,0 +1,34 @@
+<app-meni-vlasnik></app-meni-vlasnik>
+<body class="telo">
+   <span *ngIf="firme.length == 0" class="tekst">Тренутно нема фирми у систему.</span>
+   <div *ngIf="firme.length != 0">
+      <input type="text" name="pretragaNaziv" [(ngModel)]="pretragaNaziv" placeholder="Унесите назив фирме" class="pretraga">
+      <input type="text" name="pretragaAdresa" [(ngModel)]="pretragaAdresa" placeholder="Унесите адресу фирме" class="pretraga">
+      <table class="tabela">
+         <tr>
+           <th class="tabelaCelijaAktivna" (click)="sortirajPo('naziv')"><a>Назив</a>
+              <span *ngIf="parametarSortiranja === 'naziv'">
+                 {{ neopadajuceSortiranje ? '▼' : '▲' }}
+              </span>
+           </th>
+           <th class="tabelaCelijaAktivna" (click)="sortirajPo('adresa')">Адреса
+              <span *ngIf="parametarSortiranja === 'adresa'">
+                 {{ neopadajuceSortiranje ? '▼' : '▲' }}
+              </span>
+           </th>
+           <th class="tabelaCelija">Ангажовани декоратери</th>
+           <th class="tabelaCelijaAktivna" (click)="sortirajPo('ocena')">Оцена
+              <span *ngIf="parametarSortiranja === 'ocena'">
+                 {{ neopadajuceSortiranje ? '▼' : '▲' }}
+              </span>
+           </th>
+         </tr>
+         <tr *ngFor="let f of sortirajFirme()">
+           <td class="tabelaCelijaIzbor" (click)="profilFirme(f.naziv)">{{f.naziv}}</td>
+           <td class="tabelaCelija">{{f.adresa}}</td>
+           <td class="tabelaCelija">{{f.dekorateri}}</td>
+           <td class="tabelaCelija">{{izracunajOcenu(f).toFixed(2)}} {{nacrtajZvezdice(f)}}</td>
+         </tr>
+     </table>
+   </div>
+</body>
